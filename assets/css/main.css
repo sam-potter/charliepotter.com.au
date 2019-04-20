@@ -1,0 +1,286 @@
+/*--- Global CSS ---*/
+
+* {
+    font-family: 'Helvetica Neue';
+}
+
+:root {
+    --dark: #313131;
+    --blue: #4B84FC;
+    --blue-darken: #1860F8;
+
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    --transition: 300ms;
+}
+
+.blue {
+    background-color: var(--blue) !important;
+}
+
+.dash {
+    display: block;
+    height: 3px;
+    width: 100px;
+    background: #313131;
+    margin-top: 36px;
+}
+
+.col-clear {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.load-hidden {
+    visibility: hidden;
+}
+
+.container {
+    width: 85%;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+/*--- Custom elements ---*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+p,
+a {
+    font-size: 18px;
+}
+
+a.link {
+    display: inline-block;
+    color: var(--dark);
+    font-weight: 700;
+}
+
+a.link::after {
+    position: relative;
+    top: 2px;
+    left: 0;
+    content: '';
+    display: block;
+    background-color: var(--blue);
+    transition: all var(--transition);
+    width: 80%;
+    border-radius: 2px;
+    height: 3px;
+}
+
+a.link:hover::after {
+    width: 90%;
+}
+
+.btn {
+    background-color: var(--blue);
+    width: 175px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    text-transform: none;
+    box-shadow: none;
+    transition: all var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--blue);
+    box-shadow: var(--shadow-hover);
+}
+
+/*--- Mobile Navigation ---*/
+
+#mobile-nav {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    background: var(--dark);
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+    transition: all .5s cubic-bezier(.7,0,.3,1);
+}
+
+#mobile-nav.active {
+    width: 100vw;
+    padding: 50px;
+}
+
+#mobile-nav ul {
+    position: relative;
+    top: calc(50% - 40px);
+    transform: translateY(-50%);
+}
+
+#mobile-nav ul li a {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    display: block;
+    line-height: 50px;
+}
+
+#mobile-nav ul li a::before {
+    content: '';
+    z-index: -1;
+    display: block;
+    width: 0;
+    height: 50px;
+    position: relative;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--blue);
+}
+
+#mobile-nav ul li a.active::before {
+    width: 80%;
+}
+
+/*--- Desktop Navigation ---*/
+
+nav {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: none;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 80px;
+}
+
+nav ul.center {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 25px;
+}
+
+nav ul li a {
+    transition: var(--transition);
+    color: var(--dark);
+}
+
+nav ul li a:not(.btn)::after {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    content: '';
+    display: block;
+    background-color: var(--blue);
+    transition: all var(--transition);
+    width: 0.01%;
+    border-radius: 2px;
+    height: 2px;
+    margin-left: 50%;
+}
+
+nav ul li a:not(.btn):hover::after,
+nav ul li a.active::after {
+    width: 100% !important;
+    margin-left: 0 !important;
+}
+
+nav ul.center:hover li a {
+    opacity: 0.3;
+}
+
+nav ul li {
+    float: none;
+    display: inline-block;
+}
+
+nav .brand-logo {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+nav ul a:hover {
+    background: none;
+    opacity: 1 !important;
+}
+
+/*--- Content Wrapper ---*/
+
+#wrapper {
+    margin-top: 100px;
+    padding-top: 50px;
+}
+
+/*--- About ---*/
+
+#about .col-left {
+    text-align: center;
+}
+
+#about .avatar {
+    width: 80%;
+    max-width: 400px;
+    box-shadow: var(--shadow);
+}
+
+#about .col-right {
+    position: relative;
+    top: 100px;
+}
+
+#about #gallery {
+    padding-top: 100px;
+    text-align: center;
+}
+
+#about #gallery .col {
+    padding: 50px 5vw;
+}
+
+#about #gallery .gallery-image {
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+
+/*--- Director ---*/
+
+#director .col-left {
+    padding-right: 50px;
+}
+
+#director .date {
+    margin: -4px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+/*--- Footer ---*/
+
+footer {
+    padding: 100px 0;
+}
+
+@media only screen and (max-width: 992px) {
+    nav .brand-logo {
+        left: 0;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }

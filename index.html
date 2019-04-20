@@ -6,84 +6,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Sam Potter" />
     <title>Charlie Potter</title>
+
     <!-- CDN -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /> -->
+
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="./includes/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./assets/includes/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
 </head>
 
 <body>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav">
+        <ul>
+            <li><a href="#!" onclick="Page.render(event.target, 'about')" class="active">About</a></li>
+            <li><a href="#!" onclick="Page.render(event.target, 'actor')">Actor</a></li>
+            <li><a href="#!" onclick="Page.render(event.target, 'director')">Director</a></li>
+        </ul>
+    </div>
+
+    <!-- Navigation -->
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo no-style">CP.</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#!">About</a></li>
-                <li><a href="#!">Works</a></li>
-                <li><a href="#!">Contact</a></li>
+            <a href="#!" class="brand-logo no-style">Charlie Potter.</a>
+            <ul class="center hide-on-med-and-down">
+                <li><a href="#!" data-id="about" onclick="Page.render(event.target, 'about')">About</a></li>
+                <li><a href="#!" data-id="actor" onclick="Page.render(event.target, 'actor')">Actor</a></li>
+                <li><a href="#!" data-id="director" onclick="Page.render(event.target, 'director')">Director</a></li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="mailto:charlesedwardpotter@gmail.com" class="btn blue">Email Me</a></li>
             </ul>
         </div>
     </nav>
-    <div id="splash">
-        <div class="text text-left active">
-            <h1 class="typography-header">Charlie Potter.</h1>
-            <p>A talented television and film actor that desires employment in the film industry.</p>
-            <a href="#about" class="btn no-style">Learn more</a>
-        </div>
-        <div class="text text-right">
-            <div class="row">
-                <h1 class="typography-header left">About me</h1>
-                <span class="dash blue right"></span>
+
+    <!-- Content Wrapper -->
+    <div id="wrapper">
+
+        <!-- About -->
+        <div id="about" class="tabcontent">
+            <div class="container">
+
+                <!-- Welcome -->
+                <div class="row valign-wrapper">
+                    <div class="col col-left l6 m12 s12 hide-on-small-and-down">
+                        <img src="./assets/images/two.JPG" class="avatar" />
+                    </div>
+                    <div class="col l6 m12 s12">
+                        <h2>Hello, I'm Charlie</h2>
+                        <p>I’m a hard working, talented television and film actor always wanting to better myself through experience. I’m motivated, energetic, skilled at public speaking and presenting, self-directed multi-tasker comfortable interacting with people from all backgrounds. Active listener with superb oral and written communication skills.</p>
+                        <a href="#!" class="link">Download my resume</a>
+                    </div>
+                </div>
+
+                <!-- Gallery -->
+                <div id="gallery">
+                    <h2>Gallery</h2>
+                    <div class="row">
+                        <div class="col l6 m6 s12">
+                            <img src="./assets/images/one.JPG" class="gallery-image material-boxed" />
+                        </div>
+                        <div class="col l6 m6 s12">
+                            <img src="./assets/images/three.JPG" class="gallery-image material-boxed" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col l6 m6 s12">
+                            <img src="./assets/images/four.JPG" class="gallery-image material-boxed">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>My name is Charlie Potter. I'm a hard working, talented television and film
-                actor yearning to extend myself and my experience through employment in the film industry. 
-                I'm motivated, energetic and skilled at public speaking and presenting.
-                I'm a self-directed multi-tasker comfortable interacting with people from all backgrounds,
-                an active listener with superb oral and written communication skills.<br><br>
-                Just think of me as dependable, responsible and enthusiastic.</p>
         </div>
-        <div class="image-container">
-            <img class="image active" src="./images/two.jpg">
-            <img class="image" src="./images/one.jpg">
+
+        <!-- Actor -->
+        <div id="actor" class="tabcontent"></div>
+
+        <!-- Director -->
+        <div id="director" class="tabcontent">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-left l6 m12 s12">
+                        <h3>Murndal: A family tree</h3>
+                        <p class="date">Sep, 2017</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</p>
+                    </div>
+                    <div class="col l6 m12 s12">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/8j0Q9akk1zo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col col-left l6 m12 s12">
+                            <h3>Scotch College: Cordner Eggleston Cup</h3>
+                            <p class="date">July, 2017</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</p>
+                        </div>
+                        <div class="col l6 m12 s12">
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/DGQt6CedXeM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="white-overlay"></div>
+
     </div>
-    <div id="contact" class="full-height">
-        <div class="container">
-            <div class="row">
-                <h1 class="left"><span class="dash blue"></span></h1>
-                <h1 class="right">Get in touch</h1>
-            </div>
-            <div class="row">
-                <div class="col l6 m12 s12">
-                    <p>Mobile:</p>
-                </div>
-                <div class="col l6 m12 s12">
-                    <p class="right"><a href="tel:0456502555">0456 502 555</a></p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col l6 m12 s12">
-                    <p>Email:</p>
-                </div>
-                <div class="col l6 m12 s12">
-                    <p class="right"><a href="mailto:ccharlesedwardpotter@gmail.com">charlesedwardpotter@gmail.com</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>
+
+    <!-- <footer>
         <div class="container">
             <p class="center">Website designed and built by <a href="#">Sam Potter</a></p>
         </div>
-    </footer>
+    </footer> -->
+
     <!-- External libraries -->
-    <script src="./includes/materialize.min.js"></script>
-    <script src="./includes/TweenMax.min.js"></script>
-    <script src="./includes/ScrollMagic.min.js"></script>
-    <script src="./includes/animation.gsap.min.js"></script>
+    <script src="./assets/includes/materialize.min.js"></script>
+    <script src="./assets/includes/TweenMax.min.js"></script>
+    <script src="./assets/includes/ScrollMagic.min.js"></script>
+    <script src="./assets/includes/animation.gsap.min.js"></script>
+
     <!-- Scripts -->
-    <script src="./js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
