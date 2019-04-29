@@ -1,83 +1,36 @@
-var controller, scenes = [];
-
 var Page = {
-	activeElementId: undefined,
-	isAnimating: false,
+	id: undefined,
 
-	render: function(s, id) {
-		Page.clearContent(() => {
-			if (!Page.isAnimating) {
-				var el = document.getElementById(id);
+	init: function(id) {
+		Page.id = id;
 
-				s.classList.add('active');
-
-				el.style.visibility = 'hidden';
-				el.style.transform = 'translateY(10px)';
-				el.classList.add('active');
-
-				Page.isAnimating = true
-				TweenMax.to(el, 0.5, { ease: Power2.easeInOut, autoAlpha: 1, transform: 'translateY(0)' })
-					.eventCallback('onComplete', () => {
-						Page.activeElementId = id;
-						Page.isAnimating = false;
-					});
-			}
-		});
+		Page.render();
+		Page.scrollMagic();
 	},
 
-	clearContent: function(cb) {
-		if (controller) {
-		    controller.destroy();
-		    controller = null;
-		}
+    render: function() {
+        var el = document.getElementById(Page.id);
 
-		if (scenes.length > 0) {
-			for (scene of scenes) {
-			    scenes.destroy();
-			}
-			scenes = [];
-		}
+        el.style.visibility = 'hidden';
+        el.style.transform = 'translateY(10px)';
+        el.classList.add('active');
 
-		var el = document.querySelectorAll('.tabcontent.active')[0];
+        TweenMax.to(el, 0.5, { ease: Power2.easeInOut, autoAlpha: 1, transform: 'translateY(0)' })
+    },
 
-		if (el) {
-			TweenMax.to(el, 0.1, { autoAlpha: 0 })
-				.eventCallback('onComplete', () => {
-					el.classList.remove('active');
-					cb();
-				})
-		} else {
-			cb();
-		}
+    scrollMagic: function() {
+        var controller = new ScrollMagic.Controller();
+        var els = document.querySelectorAll('.load-hidden');
 
-		var s = document.querySelectorAll(`a[data-id=${Page.activeElementId}]`)[0];
-		if (s) {
-			s.classList.remove('active');
-		}
-	},
+        for (var i = 0; i < els.length; i++) {
+            var el = els[i];
 
-	initScrollMagic: function() {
-	    controller = new ScrollMagic.Controller();
-	    var els = document.querySelectorAll('.load-hidden');
+            var tween = TweenMax.to(el, 0.5, { ease: Power2.easeInOut, autoAlpha: 1, transform: 'translateY(0)' });
 
-	    for (var i = 0; i < els.length; i++) {
-	        var el = els[i];
-
-	        var tween = TweenMax.to(el, 0.5, { ease: Power2.easeInOut, delay: (Math.random() * 0.4), autoAlpha: 1, transform: 'translateY(0)' });
-
-	        var scene = new ScrollMagic.Scene({ triggerElement: el, triggerHook: 0.9, reverse: false })
-	            .setTween(tween)
-	            .addTo(controller)
-
-	        scenes.push(scene);
-	    }
-	}
-}
-
-window.onload = function() {
-
-	M.AutoInit();
-
-	Page.render(document.querySelectorAll('a[data-id=about]')[0], 'about');
+            new ScrollMagic.Scene({ triggerElement: el, triggerHook: 0.8 })
+                .setTween(tween)
+                .addTo(controller)
+        }
+    }
 
 }

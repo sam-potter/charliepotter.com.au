@@ -34,6 +34,7 @@
 
 .load-hidden {
     visibility: hidden;
+    transform: translateY(10px);
 }
 
 .container {
@@ -50,17 +51,11 @@
 
 /*--- Custom elements ---*/
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-p,
-a {
+p, a {
     font-size: 18px;
 }
 
@@ -196,8 +191,7 @@ nav ul li a:not(.btn)::after {
     margin-left: 50%;
 }
 
-nav ul li a:not(.btn):hover::after,
-nav ul li a.active::after {
+nav ul li a:not(.btn):hover::after, nav ul li a.active::after {
     width: 100% !important;
     margin-left: 0 !important;
 }
@@ -278,9 +272,12 @@ footer {
     padding: 100px 0;
 }
 
+/*--- Tablets ---*/
+
 @media only screen and (max-width: 992px) {
     nav .brand-logo {
         left: 0;
         -webkit-transform: translateX(0);
         transform: translateX(0);
     }
+}
