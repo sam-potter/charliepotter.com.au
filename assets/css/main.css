@@ -34,7 +34,7 @@
 
 .load-hidden {
     visibility: hidden;
-    transform: translateY(10px);
+    transform: translateY(20px);
 }
 
 .container {
@@ -215,6 +215,46 @@ nav ul a:hover {
     opacity: 1 !important;
 }
 
+/*--- Socials ---*/
+
+#socials {
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+}
+
+#socials a {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-position: center;
+    background-size: cover;
+    margin: 20px 0;
+    opacity: 0.6;
+}
+
+#socials a.youtube {
+    background-image: url('./../images/icons/youtube.svg');
+}
+
+#socials a.instagram {
+    background-image: url('./../images/icons/instagram.svg');
+}
+
+#socials a.linkedin {
+    background-image: url('./../images/icons/linkedin.svg');
+}
+
+#socials a.vimeo {
+    background-image: url('./../images/icons/vimeo.svg');
+}
+
+#socials a.pinterest {
+    background-image: url('./../images/icons/pinterest.svg');
+}
+
 /*--- Content Wrapper ---*/
 
 #wrapper {
@@ -270,6 +310,10 @@ nav ul a:hover {
 
 footer {
     padding: 100px 0;
+}
+
+footer p {
+    color: rgba(0, 0, 0, 0.5);
 }
 
 /*--- Tablets ---*/

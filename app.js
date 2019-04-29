@@ -18,10 +18,7 @@ app.get('/', function(req, res) {
  * About route
  */
 app.get('/about', function(req, res) {
-    var _tabs = [
-        { name: 'About', active: true }, 
-        { name: 'Director', active: false }
-    ];
+    var _tabs = [{ name: 'About', active: true }, { name: 'Director', active: false }];
 
     res.render('pages/about.ejs', { tabs: _tabs});
 });
@@ -30,10 +27,7 @@ app.get('/about', function(req, res) {
  * Director route
  */
 app.get('/director', function(req, res) {
-	var _tabs = [
-        { name: 'About', active: false }, 
-        { name: 'Director', active: true }
-    ];
+	var _tabs = [{ name: 'About', active: false }, { name: 'Director', active: true }];
 
     res.render('pages/director.ejs', { tabs: _tabs});
 });
