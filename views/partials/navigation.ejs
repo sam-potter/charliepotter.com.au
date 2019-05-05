@@ -1,5 +1,8 @@
 <!-- Mobile Navigation -->
 <div id="mobile-nav">
+    <div class="close-toggle">
+        <span class="material-icons">close</span>
+    </div>
     <ul>
         <% for (var i = 0; i < tabs.length; i++) { %>
         	<% if (tabs[i].active) { %>
@@ -8,13 +11,17 @@
         		<li><a href="/<%= tabs[i].name.toLowerCase() %>" data-id="<%= tabs[i].name.toLowerCase() %>"><%= tabs[i].name %></a></li>
         	<% } %>
         <% } %>
+        <li><a href="/contact" data-id="contact">Contact</a></li>
     </ul>
+    <div class="socials-container">
+        <a href="http://linkedin.com/in/charlie-potter-135705163" target="_blank">LinkedIn</a> | <a href="https://www.youtube.com/channel/UCIgxUp5h-AtEB9MqeOq2avg" target="_blank">Youtube</a> | <a href="https://vimeo.com/charliepotter" target="_blank">Vimeo</a>
+    </div>
 </div>
 
 <!-- Navigation -->
 <nav>
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo no-style">Charlie Potter.</a>
+        <a href="/" class="brand-logo no-style">Charlie Potter.</a>
         <ul class="center hide-on-med-and-down">
             <% for (var i = 0; i < tabs.length; i++) { %>
             	<% if (tabs[i].active) { %>
@@ -25,7 +32,12 @@
             <% } %>
         </ul>
         <ul class="right hide-on-med-and-down">
-            <li><a href="mailto:charlesedwardpotter@gmail.com" class="btn blue">Email Me</a></li>
+            <li><a href="/contact" class="btn blue">Contact</a></li>
+        </ul>
+        <ul class="menu-toggle right hide-on-large-only">
+            <li>
+                <a href="#menu" class="exclude"><span class="material-icons">menu</span></a>
+            </li>
         </ul>
     </div>
 </nav>

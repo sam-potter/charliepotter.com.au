@@ -7,29 +7,13 @@ app.use(expressLayouts);
 app.use('/assets', express.static('assets'));
 app.set('view engine', 'ejs');
 
-/*
- *	Home route
- */
-app.get('/', function(req, res) {
-    res.redirect('/about');
-});
+var tabs = tab => [{ name: 'Latest', active: (tab == 'Latest') }, { name: 'About', active: (tab == 'About') }, { name: 'Actor', active: (tab == 'Actor') }, { name: 'Director', active: (tab == 'Director') }];
 
-/*
- * About route
- */
-app.get('/about', function(req, res) {
-    var _tabs = [{ name: 'About', active: true }, { name: 'Director', active: false }];
-
-    res.render('pages/about.ejs', { tabs: _tabs});
-});
-
-/*
- * Director route
- */
-app.get('/director', function(req, res) {
-	var _tabs = [{ name: 'About', active: false }, { name: 'Director', active: true }];
-
-    res.render('pages/director.ejs', { tabs: _tabs});
-});
+app.get('/', (req, res) => res.redirect('/about'));
+app.get('/latest', (req, res) => res.render('pages/latest.ejs', { tabs: tabs('Latest') }));
+app.get('/about', (req, res) => res.render('pages/about.ejs', { tabs: tabs('About') }));
+app.get('/director', (req, res) => res.render('pages/director.ejs', { tabs: tabs('Director') }));
+app.get('/actor', (req, res) => res.render('pages/actor.ejs', { tabs: tabs('Actor') }));
+app.get('/contact', (req, res) => res.render('pages/contact.ejs', { tabs: tabs() }));
 
 app.listen(3000, () => console.log('Server running'));

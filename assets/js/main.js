@@ -1,15 +1,15 @@
 var Page = {
-	id: undefined,
 
 	init: function(id) {
-		Page.id = id;
-
-		Page.render();
+		Page.render(id);
 		Page.scrollMagic();
+
+        document.querySelectorAll('.menu-toggle')[0].addEventListener('mousedown', Page.openMenu);
+        document.querySelectorAll('.close-toggle')[0].addEventListener('mousedown', Page.closeMenu);
 	},
 
-    render: function() {
-        var el = document.getElementById(Page.id);
+    render: function(id) {
+        var el = document.getElementById(id);
 
         el.style.visibility = 'hidden';
         el.style.transform = 'translateY(10px)';
@@ -31,6 +31,10 @@ var Page = {
                 .setTween(tween)
                 .addTo(controller)
         }
-    }
+    },
+
+    openMenu: () => document.getElementById('mobile-nav').classList.add('active'),
+
+    closeMenu: () => document.getElementById('mobile-nav').classList.remove('active')
 
 }
