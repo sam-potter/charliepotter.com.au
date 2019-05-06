@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/saampotter/charlie-portfolio-site#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "express-ejs-layouts": "^2.5.0"
+    "express-ejs-layouts": "^2.5.0",
+    "helmet": "^3.18.0"
   }
 }

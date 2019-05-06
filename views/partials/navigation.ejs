@@ -6,7 +6,7 @@
     <ul>
         <% for (var i = 0; i < tabs.length; i++) { %>
         	<% if (tabs[i].active) { %>
-        		<li><a href="/<%= tabs[i].name.toLowerCase() %>" data-id="<%= tabs[i].name.toLowerCase() %>" class="active"><%= tabs[i].name %></a></li>
+        		<li><a href="#" data-id="<%= tabs[i].name.toLowerCase() %>" class="active"><%= tabs[i].name %></a></li>
         	<% } else { %>
         		<li><a href="/<%= tabs[i].name.toLowerCase() %>" data-id="<%= tabs[i].name.toLowerCase() %>"><%= tabs[i].name %></a></li>
         	<% } %>
@@ -25,7 +25,7 @@
         <ul class="center hide-on-med-and-down">
             <% for (var i = 0; i < tabs.length; i++) { %>
             	<% if (tabs[i].active) { %>
-            		<li><a href="/<%= tabs[i].name.toLowerCase() %>" data-id="<%= tabs[i].name.toLowerCase() %>" class="active"><%= tabs[i].name %></a></li>
+            		<li><a href="#" data-id="<%= tabs[i].name.toLowerCase() %>" class="active"><%= tabs[i].name %></a></li>
             	<% } else { %>
             		<li><a href="/<%= tabs[i].name.toLowerCase() %>" data-id="<%= tabs[i].name.toLowerCase() %>"><%= tabs[i].name %></a></li>
             	<% } %>
