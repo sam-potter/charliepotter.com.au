@@ -2,6 +2,11 @@
 
 * {
     font-family: 'Helvetica Neue';
+    color: #fff;
+}
+
+html {
+    background-color: #000;
 }
 
 :root {
@@ -13,6 +18,10 @@
     --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.3);
 
     --transition: 300ms;
+}
+
+::-webkit-scrollbar {
+    background-color: #000;
 }
 
 .blue {
@@ -66,7 +75,7 @@ p {
 
 a.link {
     display: inline-block;
-    color: var(--dark);
+    color: #fff;
     font-weight: 700;
 }
 
@@ -95,12 +104,12 @@ a.link:hover::after {
     font-size: 15px;
     text-transform: none;
     box-shadow: none;
+    border-radius: 10px;
     transition: all var(--transition);
 }
 
 .btn:hover {
     background-color: var(--blue);
-    box-shadow: var(--shadow-hover);
 }
 
 /*--- Mobile Navigation ---*/
@@ -132,10 +141,10 @@ a.link:hover::after {
 
 #mobile-nav ul li a {
     color: #fff;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
     display: block;
-    line-height: 50px;
+    line-height: 20px;
 }
 
 #mobile-nav ul li a::before {
@@ -170,8 +179,8 @@ a.link:hover::after {
 
 #mobile-nav .close-toggle {
     position: absolute;
-    left: 50%;
-    top: 50px;
+    right: 30px;
+    top: 47px;
     transform: translateX(-50%);
     cursor: pointer;
     color: #fff;
@@ -185,27 +194,22 @@ a.link:hover::after {
 
 nav {
     z-index: 1;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    background: #fff;
+    background: none;
     box-shadow: none;
     height: 100px;
     line-height: 100px;
     padding: 0 80px;
 }
 
-nav ul.center {
-    display: inline-block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 25px;
-}
-
 nav ul li a {
     transition: var(--transition);
-    color: var(--dark);
+    color: #fff;
+    height: 20px;
+    padding: 40px 20px;
+    line-height: 20px;
 }
 
 nav ul li a:not(.btn):not(.exclude)::after {
@@ -228,20 +232,6 @@ nav ul li a.active::after {
     margin-left: 0 !important;
 }
 
-nav ul.center:hover li a {
-    opacity: 0.3;
-}
-
-nav ul li {
-    float: none;
-    display: inline-block;
-}
-
-nav .brand-logo {
-    color: var(--dark);
-    font-weight: 700;
-}
-
 nav ul a:hover {
     background: none;
     opacity: 1 !important;
@@ -255,39 +245,6 @@ nav .menu-toggle {
 
 nav .menu-toggle li {
     line-height: 100px;
-}
-
-nav .menu-toggle .material-icons {
-    color: var(--dark);
-}
-
-/*--- Socials ---*/
-
-#socials {
-    z-index: 10;
-    position: fixed;
-    top: 50%;
-    left: 50px;
-    transform: translateY(-50%);
-}
-
-#socials a {
-    display: block;
-    width: 22px;
-    height: 22px;
-    background-position: center;
-    background-size: cover;
-    margin: 20px 0;
-    opacity: 0.6;
-    transition: var(--transition);
-}
-
-#socials:hover a {
-    opacity: 0.3;
-}
-
-#socials a:hover {
-    opacity: 0.6;
 }
 
 /*--- Content Wrapper ---*/
@@ -414,11 +371,16 @@ nav .menu-toggle .material-icons {
 /*--- Footer ---*/
 
 footer {
-    padding: 100px 0;
+
 }
 
-footer p {
-    color: rgba(0, 0, 0, 0.5);
+footer .col {
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    font-size: 18px;
 }
 
 /*--- Tablets ---*/
