@@ -239,6 +239,39 @@ nav .menu-toggle li {
     line-height: 100px;
 }
 
+
+/*--- Socials ---*/
+
+#socials {
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+}
+
+#socials a {
+    display: block;
+    background-position: center;
+    background-size: cover;
+    margin: 20px 0;
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+#socials a img {
+    width: 30px;
+    height: 30px;
+}
+
+#socials:hover a {
+    opacity: 0.3;
+}
+
+#socials a:hover {
+    opacity: 0.6;
+}
+
 /*--- Content Wrapper ---*/
 
 #wrapper {
