@@ -1,40 +1,59 @@
-<%- include ../partials/navigation.ejs -%>
-
+<!-- Mobile Navigation -->
+<div id="mobile-nav">
+    <div class="close-toggle" onclick="_toggleMobileNav()">
+        <span class="material-icons">close</span>
+    </div>
+    <ul>
+        <li><a href="/latest" data-id="latest">Latest</a></li>
+        <li><a href="#" data-id="about" class="active">About</a></li>
+        <li><a href="/actor" data-id="actor">Actor</a></li>
+        <li><a href="/director" data-id="director">Director</a></li>
+        <li><a href="/contact" data-id="contact">Contact</a></li>
+    </ul>
+    <div class="socials-container">
+        <a href="http://linkedin.com/in/charlie-potter-135705163" target="_blank">LinkedIn</a> | 
+        <a href="https://www.youtube.com/channel/UCIgxUp5h-AtEB9MqeOq2avg" target="_blank">Youtube</a> | 
+        <a href="https://vimeo.com/charliepotter" target="_blank">Vimeo</a>
+    </div>
+</div>
+<!-- Desktop Navigation -->
+<nav>
+    <div class="nav-wrapper">
+        <a href="/about" class="brand-logo">Charlie Potter<span>.</span></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/latest" data-id="latest">Latest</a></li>
+            <li><a href="#" data-id="about" class="active">About</a></li>
+            <li><a href="/actor" data-id="actor">Actor</a></li>
+            <li><a href="/director" data-id="director">Director</a></li>
+        </ul>
+        <ul class="menu-toggle right hide-on-large-only"  onclick="_toggleMobileNav()">
+            <li><a class="exclude"><span class="material-icons">menu</span></a></li>
+        </ul>
+    </div>
+</nav>
 <!-- Content Wrapper -->
 <div id="wrapper">
-
-    <!-- About Section -->
-    <div id="about" class="tabcontent">
-        <div class="container">
-
-            <!-- About Intro -->
-            <div class="row valign-wrapper">
-                <div class="col col-left l6 m12 s12 hide-on-small-and-down">
-                    <img alt="Headshot 1 of Charlie Potter" src="./assets/images/one.JPG" class="avatar" />
-                </div>
-                <div class="col l6 m12 s12">
-                    <h2>About</h2>
-                    <p>Charlie Potter is a Melbourne born actor and media creator. Armed with a sensitive soul and an electric energy, he’s your friendly Sydney-based teenager. Between acting studies and training Charlie’s exploring new angles and ideas with his camera, and continuing his growth in storytelling.</p>
-                    <a href="/assets/pdf/charlie-potter-resumé.pdf" target="_blank" class="link">View resume</a>
-                </div>
+    <div id="about" class="container">
+        <div class="row valign-wrapper">
+            <div class="col col-left l6 m12 s12">
+                <img alt="Headshot 1 of Charlie Potter" src="./assets/images/one.JPG" class="avatar" />
             </div>
-
-            <!-- Gallery Images -->
-            <div id="gallery">
-                <h2>Gallery</h2>
-                <div class="row">
-                    <div class="col l6 m6 s12">
-                        <img alt="Headshot 2 of Charlie Potter" src="./assets/images/two.JPG" class="gallery-image load-hidden" />
-                    </div>
-                    <div class="col l6 m6 s12">
-                        <img alt="Headshot 3 of Charlie Potter" src="./assets/images/four.JPG" class="gallery-image load-hidden" />
-                    </div>
+            <div class="col l6 m12 s12">
+                <h2>About</h2>
+                <p>Charlie Potter is a Melbourne born actor and media creator. Armed with a sensitive soul and an electric energy, he’s your friendly Sydney-based teenager. Between acting studies and training Charlie’s exploring new angles and ideas with his camera, and continuing his growth in storytelling.</p>
+                <a href="/assets/pdf/charlie-potter-resumé.pdf" target="_blank" class="link">View resume</a>
+            </div>
+        </div>
+        <div id="gallery">
+            <h2>Gallery</h2>
+            <div class="row">
+                <div class="col l6 m6 s12">
+                    <img alt="Headshot 2 of Charlie Potter" src="./assets/images/two.JPG" class="gallery-image" />
+                </div>
+                <div class="col l6 m6 s12">
+                    <img alt="Headshot 3 of Charlie Potter" src="./assets/images/four.JPG" class="gallery-image" />
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Initiation script -->
-    <script type="text/javascript">window.onload = () => Page.init('about')</script>
-
 </div>

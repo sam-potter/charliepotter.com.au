@@ -1,13 +1,40 @@
-<%- include ../partials/navigation.ejs -%>
-
+<!-- Mobile Navigation -->
+<div id="mobile-nav">
+    <div class="close-toggle" onclick="_toggleMobileNav()">
+        <span class="material-icons">close</span>
+    </div>
+    <ul>
+        <li><a href="/latest" data-id="latest">Latest</a></li>
+        <li><a href="/about" data-id="about">About</a></li>
+        <li><a href="#" data-id="actor" class="active">Actor</a></li>
+        <li><a href="/director" data-id="director">Director</a></li>
+        <li><a href="/contact" data-id="contact">Contact</a></li>
+    </ul>
+    <div class="socials-container">
+        <a href="http://linkedin.com/in/charlie-potter-135705163" target="_blank">LinkedIn</a> | 
+        <a href="https://www.youtube.com/channel/UCIgxUp5h-AtEB9MqeOq2avg" target="_blank">Youtube</a> | 
+        <a href="https://vimeo.com/charliepotter" target="_blank">Vimeo</a>
+    </div>
+</div>
+<!-- Desktop Navigation -->
+<nav>
+    <div class="nav-wrapper">
+        <a href="/about" class="brand-logo">Charlie Potter<span>.</span></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/latest" data-id="latest">Latest</a></li>
+            <li><a href="/about" data-id="about">About</a></li>
+            <li><a href="#" data-id="actor" class="active">Actor</a></li>
+            <li><a href="/director" data-id="director">Director</a></li>
+        </ul>
+        <ul class="menu-toggle right hide-on-large-only"  onclick="_toggleMobileNav()">
+            <li><a class="exclude"><span class="material-icons">menu</span></a></li>
+        </ul>
+    </div>
+</nav>
 <!-- Content Wrapper -->
 <div id="wrapper">
-
-    <!-- Actor -->
     <div id="actor" class="tabcontent">
         <div class="container">
-
-            <!-- Showreel -->
             <div class="row">
                 <div class="col l12 m12 s12">
                     <div style="padding:56.25% 0 0 0;position:relative;">
@@ -16,18 +43,11 @@
                     <script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
             </div>
-
-            <!-- Showcast -->
             <div class="row">
                 <div class="col l12 m12 s12">
                     <h2 class="center">Find me on Showcast <a href="https://www.showcast.com.au/showcast/profile/gdZE4jUe" target="_blank">here</a>.</h2>
                 </div>
             </div>
-            
         </div>
     </div>
-
-    <!-- Initiation script -->
-    <script type="text/javascript">window.onload = () => Page.init('actor')</script>
-    
 </div>

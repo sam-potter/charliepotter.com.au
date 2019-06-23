@@ -1,13 +1,11 @@
 /*--- Global CSS ---*/
 
-* {
-    font-family: 'Helvetica Neue';
-}
+* { font-family: 'Helvetica Neue'; }
+html { min-height: 101vh; }
 
 :root {
     --dark: #313131;
     --blue: #4B84FC;
-    --blue-darken: #1860F8;
 
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -15,48 +13,13 @@
     --transition: 300ms;
 }
 
-.blue {
-    background-color: var(--blue) !important;
-}
-
-.dash {
-    display: block;
-    height: 3px;
-    width: 100px;
-    background: #313131;
-    margin-top: 36px;
-}
-
-.col-clear {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
 .row {
     padding: 20px 0;
 }
 
-.load-hidden {
-    visibility: hidden;
-    transform: translateY(20px);
-}
-
-.tabcontent {
-    display: none;
-}
-
-.tabcontent.active {
-    display: block;
-}
-
 /*--- Custom elements ---*/
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
@@ -87,20 +50,27 @@ a.link:hover::after {
     width: 90%;
 }
 
-.btn {
+.contact-btn {
+    position: fixed;
+    bottom: 3vh;
+    right: 3vh;
     background-color: var(--blue);
-    width: 175px;
+    width: 160px;
     height: 50px;
     line-height: 50px;
-    font-size: 15px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
     text-transform: none;
     box-shadow: none;
     border-radius: 10px;
     transition: all var(--transition);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.btn:hover {
-    background-color: var(--blue);
+.contact-btn:hover, .contact-btn:focus {
+    background-color: #fff;
+    color: var(--blue);
     box-shadow: var(--shadow-hover);
 }
 
@@ -196,7 +166,16 @@ nav {
     padding: 0 80px;
 }
 
-nav ul li a {
+nav .brand-logo {
+    font-weight: 700;
+    color: var(--dark);
+}
+
+nav .brand-logo span {
+    color: var(--blue);
+}
+
+nav ul li a:not(.exclude) {
     transition: var(--transition);
     color: var(--dark);
     height: 20px;
@@ -235,8 +214,13 @@ nav .menu-toggle {
     top: 10px;
 }
 
-nav .menu-toggle li {
+nav .menu-toggle li a {
     line-height: 100px;
+    transition: var(--transition);
+    color: var(--dark);
+    height: 20px;
+    padding: 30px 20px;
+    line-height: 20px;
 }
 
 
@@ -255,7 +239,7 @@ nav .menu-toggle li {
     background-position: center;
     background-size: cover;
     margin: 20px 0;
-    opacity: 0.6;
+    opacity: 1;
     transition: var(--transition);
 }
 
@@ -269,7 +253,7 @@ nav .menu-toggle li {
 }
 
 #socials a:hover {
-    opacity: 0.6;
+    opacity: 1;
 }
 
 /*--- Content Wrapper ---*/
@@ -393,26 +377,10 @@ nav .menu-toggle li {
     font-weight: 800;
 }
 
-/*--- Footer ---*/
-
-footer {
-
-}
-
-footer .col {
-    text-align: center;
-}
-
-footer a {
-    color: var(--dark);
-    font-size: 18px;
-}
-
 /*--- Tablets ---*/
 
 @media only screen and (max-width: 992px) {
     nav .brand-logo {
-
         left: 0;
         -webkit-transform: translateX(0);
         transform: translateX(0);
