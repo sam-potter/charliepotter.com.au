@@ -273,7 +273,7 @@ nav .menu-toggle li a {
 
 #wrapper {
     margin-top: 100px;
-    padding: 50px 0 100px 0;
+    padding: 50px 0 0 0;
 }
 
 /*--- Latest ---*/
@@ -300,6 +300,20 @@ nav .menu-toggle li a {
 
 /*--- About ---*/
 
+#about #splash::after {
+    content: '';
+    display: block;
+    position: relative;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 220px;
+    background: url('../images/curve.svg');
+    background-repeat: none;
+    background-position: left bottom;
+}
+
 #about .row {
     display: flex;
     display: -webkit-flex;
@@ -309,6 +323,7 @@ nav .menu-toggle li a {
 #about .avatar {
     width: 80%;
     max-width: 400px;
+    min-height: 577px;
     box-shadow: var(--shadow);
     position: relative;
     left: 50%;
@@ -322,8 +337,9 @@ nav .menu-toggle li a {
 }
 
 #about #gallery {
-    padding-top: 100px;
     text-align: center;
+    background: rgba(75, 132, 252, 0.1);
+    overflow: auto;
 }
 
 #about #gallery .col {
@@ -332,6 +348,7 @@ nav .menu-toggle li a {
 
 #about #gallery .gallery-image {
     width: 100%;
+    height: 546px;
     box-shadow: var(--shadow);
 }
 
@@ -376,15 +393,11 @@ nav .menu-toggle li a {
     flex-wrap: wrap;
 }
 
-#contact .text-container {
+/*#contact .text-container {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-}
-
-#contact h2 {
-    font-weight: 400;
-}
+}*/
 
 #contact .title {
     font-weight: 800;
