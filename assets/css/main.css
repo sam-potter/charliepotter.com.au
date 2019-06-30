@@ -346,7 +346,6 @@ nav .menu-toggle li a {
 #about #gallery {
     text-align: center;
     background: rgba(75, 132, 252, 0.1);
-    overflow: auto;
 }
 
 #about #gallery .col {
@@ -356,6 +355,10 @@ nav .menu-toggle li a {
 #about #gallery .gallery-image {
     width: 100%;
     box-shadow: var(--shadow);
+}
+
+#about #gallery h2 {
+    margin-top: 0;
 }
 
 #about .link {
