@@ -334,6 +334,7 @@ nav .menu-toggle li a {
 
 #about #splash .avatar {
     width: 80%;
+    min-height: 66.67%;
     box-shadow: var(--shadow);
 }
 
