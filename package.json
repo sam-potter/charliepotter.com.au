@@ -23,5 +23,8 @@
     "express-ejs-layouts": "^2.5.0",
     "helmet": "^3.18.0",
     "reload": "^3.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
