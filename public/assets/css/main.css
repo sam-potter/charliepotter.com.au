@@ -331,6 +331,49 @@ nav .menu-toggle li a {
   top: 3px;
 }
 
+/*--- About ---*/
+
+/* #about #splash::after {
+  content: "";
+  display: block;
+  position: relative;
+  z-index: -1;
+  bottom: -1px;
+  left: 0;
+  width: 100vw;
+  height: 220px;
+  background: url("assets/images/curve.svg");
+  background-repeat: none;
+  background-position: left bottom;
+} */
+
+#about .row {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+#about #splash .avatar {
+  width: 80%;
+  min-height: 66.67%;
+  box-shadow: var(--shadow);
+}
+
+#about #splash .vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#about #splash .button-group {
+  display: flex;
+  flex-direction: row;
+}
+
+#about #splash .button-group a:last-child {
+  margin-left: 20px;
+}
+
 /*--- Creator ---*/
 
 #director .row {

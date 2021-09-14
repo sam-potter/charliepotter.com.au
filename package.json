@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "author": "Sam Potter, sam.potter@hotmail.com",
   "scripts": {
-    "serve": "serve public"
+    "build": "ls",
+    "dev": "live-server public --port=3000"
   },
   "devDependencies": {
-    "serve": "^12.0.1"
+    "live-server": "^1.2.1"
   }
 }

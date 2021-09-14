@@ -1,5 +1,4 @@
-const _toggleMobileNav = () =>
-  document.getElementById("mobile-nav").classList.toggle("active");
+const _toggleMobileNav = () => document.getElementById("mobile-nav").classList.toggle("active");
 
 const init = function () {
   new LazyLoad({ elements_selector: "img[data-src]" });
@@ -65,20 +64,20 @@ const openPhotoSwipe = () => {
 
 window.onload = () => {
   init();
-  barba.init();
+  // barba.init();
 
-  barba.hooks.before((data) => {
-    return new Promise((resolve) => {
-      const el = data.current.container.querySelector("#wrapper");
-      const animation = { css: { opacity: 0, transform: "translateY(-20px)" } };
-      TweenMax.to(el, 0.25, animation).eventCallback("onComplete", resolve);
-    });
-  });
+  // barba.hooks.before((data) => {
+  //   return new Promise((resolve) => {
+  //     const el = data.current.container.querySelector("#wrapper");
+  //     const animation = { css: { opacity: 0, transform: "translateY(-20px)" } };
+  //     TweenMax.to(el, 0.25, animation).eventCallback("onComplete", resolve);
+  //   });
+  // });
 
-  barba.hooks.beforeEnter((data) => {
-    const el = data.next.container.querySelector("#wrapper");
-    const animation = { css: { opacity: 0, transform: "translateY(20px)" } };
-    TweenMax.from(el, 0.25, animation);
-    init();
-  });
+  // barba.hooks.beforeEnter((data) => {
+  //   const el = data.next.container.querySelector("#wrapper");
+  //   const animation = { css: { opacity: 0, transform: "translateY(20px)" } };
+  //   TweenMax.from(el, 0.25, animation);
+  //   init();
+  // });
 };

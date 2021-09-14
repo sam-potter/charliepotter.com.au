@@ -38,68 +38,18 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css"
     />
-    <style>
-      /* #about #splash::after {
-        content: "";
-        display: block;
-        position: relative;
-        z-index: -1;
-        bottom: -1px;
-        left: 0;
-        width: 100vw;
-        height: 220px;
-        background: url("assets/images/curve.svg");
-        background-repeat: none;
-        background-position: left bottom;
-      } */
-
-      #about .row {
-        display: flex;
-        display: -webkit-flex;
-        flex-wrap: wrap;
-      }
-
-      #about #splash .avatar {
-        width: 80%;
-        min-height: 66.67%;
-        box-shadow: var(--shadow);
-      }
-
-      #about #splash .vertical-align {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      #about #splash .button-group {
-        display: flex;
-        flex-direction: row;
-      }
-
-      #about #splash .button-group a:last-child {
-        margin-left: 20px;
-      }
-    </style>
   </head>
 
   <body>
     <div id="socials" class="hide-on-med-and-down">
       <ul>
         <li>
-          <a
-            target="_blank"
-            class="linkedin"
-            href="http://linkedin.com/in/charlie-potter-135705163"
-          >
+          <a target="_blank" class="linkedin" href="http://linkedin.com/in/charlie-potter-135705163">
             <img src="./assets/icons/linkedin.png" />
           </a>
         </li>
         <li>
-          <a
-            target="_blank"
-            class="youtube"
-            href="https://www.youtube.com/channel/UCIgxUp5h-AtEB9MqeOq2avg"
-          >
+          <a target="_blank" class="youtube" href="https://www.youtube.com/channel/UCIgxUp5h-AtEB9MqeOq2avg">
             <img src="./assets/icons/youtube.png" />
           </a>
         </li>
@@ -118,18 +68,16 @@
             <span class="material-icons">close</span>
           </div>
           <ul>
-            <li><a href="/latest" data-id="latest">Latest</a></li>
+            <li><a href="/latest.html" data-id="latest">Latest</a></li>
             <li><a href="#" data-id="about" class="active">About</a></li>
-            <li><a href="/actor" data-id="actor">Actor</a></li>
-            <li><a href="/director" data-id="director">Director</a></li>
-            <li><a href="/contact" data-id="contact">Contact</a></li>
+            <li><a href="/actor.html" data-id="actor">Actor</a></li>
+            <li><a href="/director.html" data-id="director">Director</a></li>
+            <li><a href="/contact.html" data-id="contact">Contact</a></li>
           </ul>
           <div class="socials-container">
             <a href="http://linkedin.com/in/charlie-potter-135705163" target="_blank">LinkedIn</a>
             |
-            <a href="https://www.youtube.com/channel/UCIgxUp5h-AtEB9MqeOq2avg" target="_blank">
-              Youtube
-            </a>
+            <a href="https://www.youtube.com/channel/UCIgxUp5h-AtEB9MqeOq2avg" target="_blank"> Youtube </a>
             |
             <a href="https://vimeo.com/charliepotter" target="_blank">Vimeo</a>
           </div>
@@ -139,10 +87,10 @@
           <div class="nav-wrapper">
             <a href="/" class="brand-logo">Charlie Potter<span>.</span></a>
             <ul class="right hide-on-med-and-down">
-              <li><a href="/latest" data-id="latest">Latest</a></li>
+              <li><a href="/latest.html" data-id="latest">Latest</a></li>
               <li><a href="#" data-id="about" class="active">About</a></li>
-              <li><a href="/actor" data-id="actor">Actor</a></li>
-              <li><a href="/director" data-id="director">Director</a></li>
+              <li><a href="/actor.html" data-id="actor">Actor</a></li>
+              <li><a href="/director.html" data-id="director">Director</a></li>
             </ul>
             <ul class="menu-toggle right hide-on-large-only" onclick="_toggleMobileNav()">
               <li>
@@ -169,28 +117,23 @@
                     <div class="vertical-align">
                       <h2>About</h2>
                       <p>
-                        Charlie Potter is an Australian-born actor and media creator. Armed with a
-                        sensitive soul and an electric energy, he's your friendly Sydney-based
-                        teenager. Between acting studies and training, Charlie's directing,
-                        producing and writing his next project, continuing his growth in
+                        Charlie Potter is an Australian-born actor and media creator. Armed with a sensitive soul and an
+                        electric energy, he's your friendly Sydney-based teenager. Between acting studies and training,
+                        Charlie's directing, producing and writing his next project, continuing his growth in
                         storytelling.
                       </p>
                       <div class="button-group">
-                        <a
-                          href="/assets/pdf/charlie-potter-resume.pdf"
-                          class="button primary"
-                          target="_blank"
-                          >View Resumé</a
-                        >
-                        <a onclick="openPhotoSwipe()" class="button secondary"
-                          >View Photo Gallery</a
-                        >
+                        <a href="/assets/pdf/charlie-potter-resume.pdf" class="button primary" target="_blank">
+                          View Resumé
+                        </a>
+                        <a onclick="openPhotoSwipe()" class="button secondary">View Photo Gallery</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
               <div class="pswp__bg"></div>
               <div class="pswp__scroll-wrap">
@@ -204,10 +147,7 @@
                     <div class="pswp__counter"></div>
                     <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
                     <button class="pswp__button pswp__button--share" title="Share"></button>
-                    <button
-                      class="pswp__button pswp__button--fs"
-                      title="Toggle fullscreen"
-                    ></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
                     <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
                     <div class="pswp__preloader">
                       <div class="pswp__preloader__icn">
@@ -220,14 +160,8 @@
                   <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
                     <div class="pswp__share-tooltip"></div>
                   </div>
-                  <button
-                    class="pswp__button pswp__button--arrow--left"
-                    title="Previous (arrow left)"
-                  ></button>
-                  <button
-                    class="pswp__button pswp__button--arrow--right"
-                    title="Next (arrow right)"
-                  ></button>
+                  <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                  <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
                   <div class="pswp__caption">
                     <div class="pswp__caption__center"></div>
                   </div>
@@ -239,12 +173,12 @@
       </div>
     </div>
 
-    <a href="/contact" class="contact-btn btn">Contact</a>
+    <a href="/contact.html" class="contact-btn btn">Contact</a>
 
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script>
-    <script src="https://unpkg.com/@barba/core"></script>
+    <!-- <script src="https://unpkg.com/@barba/core"></script> -->
     <script type="text/javascript" src="./assets/includes/materialize.min.js"></script>
     <script type="text/javascript" src="./assets/includes/TweenMax.min.js"></script>
     <script type="text/javascript" src="./assets/includes/lazyload.min.js"></script>
