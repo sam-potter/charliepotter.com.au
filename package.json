@@ -1,30 +1,11 @@
 {
   "name": "charlie-portfolio-site",
   "version": "1.0.0",
-  "description": "<h1 align=\"center\"> Charlie Potter Portfolio Site </h1>",
-  "main": "app.js",
-  "scripts": {
-    "start": "nodemon app.js -e ejs,js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/saampotter/charlie-portfolio-site.git"
-  },
   "author": "Sam Potter, sam.potter@hotmail.com",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/saampotter/charlie-portfolio-site/issues"
-  },
-  "homepage": "https://github.com/saampotter/charlie-portfolio-site#readme",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "express-ejs-layouts": "^2.5.0",
-    "helmet": "^3.18.0",
-    "reload": "^3.0.1"
+  "scripts": {
+    "serve": "serve public"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "serve": "^12.0.1"
   }
 }
