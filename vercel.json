@@ -1,4 +1,9 @@
 {
   "cleanUrls": true,
-  "redirects": [{ "source": "/about", "destination": "/" }]
+  "redirects": [
+    {
+      "source": "/about",
+      "destination": "/"
+    }
+  ]
 }
