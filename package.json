@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Sam Potter, sam.potter@hotmail.com",
   "scripts": {
-    "build": "ls",
+    "build": "echo 'Done'",
     "dev": "live-server public --port=3000"
   },
   "devDependencies": {
