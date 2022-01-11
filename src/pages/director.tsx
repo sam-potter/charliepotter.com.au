@@ -2,7 +2,7 @@ const Film: React.FC<{ title: string; date: string; info: string; url: string }>
   return (
     <div className="md:flex md:items-center md:justify-between">
       <div>
-        <h4 className="text-3xl font-semibold text-gray-900">{props.title}</h4>
+        <h4 className="text-2xl font-semibold text-gray-900 md:text-3xl">{props.title}</h4>
         <p className="pt-1 font-medium text-blue-500">{props.date}</p>
         <p className="pt-4 text-gray-900 max-w-prose">{props.info}</p>
       </div>
