@@ -1,17 +1,29 @@
 import Image from 'next/image';
 
+import ImageTwelve from '@/../public/images/2021_DSSP Showcase (141).jpg';
+import ImageThirteen from '@/../public/images/2021_DSSP Showcase (142).jpg';
+import ImageFourteen from '@/../public/images/2021_DSSP Showcase (145).jpg';
+import ImageFifteen from '@/../public/images/2021_DSSP Showcase (190).jpg';
+import ImageSixteen from '@/../public/images/2021_DSSP Showcase (208).jpg';
+import ImageSeventeen from '@/../public/images/2021_DSSP Showcase (209).jpg';
+import ImageEighteen from '@/../public/images/2021_DSSP Showcase (271).jpg';
+import ImageEleven from '@/../public/images/2021_DSSP_139.jpg';
 import ImageEight from '@/../public/images/eight.png';
 import ImageFive from '@/../public/images/five.png';
 import ImageFour from '@/../public/images/four.jpg';
+import ImageTwenty from '@/../public/images/IMG_0341.jpg';
+import ImageTwentyOne from '@/../public/images/IMG_5232.jpg';
+import ImageTwentyTwo from '@/../public/images/IMG_5233.jpg';
 import ImageNine from '@/../public/images/nine.png';
 import ImageOne from '@/../public/images/oneFull.jpg';
+import ImageNineteen from '@/../public/images/Paper.Notebook.15.jpg';
 import ImageSeven from '@/../public/images/seven.png';
 import ImageSix from '@/../public/images/six.png';
 import ImageTen from '@/../public/images/ten.png';
 import ImageThree from '@/../public/images/threeFull.jpg';
 import ImageTwo from '@/../public/images/twoFull.jpg';
 
-const AnimatedImage: React.FC<{ src: StaticImageData; priority?: boolean; id: string }> = props => {
+const ImageWrapper: React.FC<{ src: StaticImageData; priority?: boolean }> = props => {
   return (
     <div>
       <Image
@@ -30,30 +42,39 @@ const Images = () => {
   return (
     <div className="grid grid-cols-1 py-24 space-y-4 lg:space-y-0 lg:py-48 lg:grid-cols-3 lg:gap-4 xl:gap-8">
       <div className="space-y-4 xl:space-y-8">
-        <AnimatedImage src={ImageOne} priority id="one" />
-        <AnimatedImage src={ImageSix} priority id="six" />
-        <AnimatedImage src={ImageTwo} priority id="two" />
+        <ImageWrapper src={ImageOne} priority />
+        <ImageWrapper src={ImageSix} />
+        <ImageWrapper src={ImageTwo} />
+        <ImageWrapper src={ImageTwentyOne} />
+        <ImageWrapper src={ImageTwentyTwo} />
+        <ImageWrapper src={ImageFifteen} />
+        <ImageWrapper src={ImageThirteen} />
       </div>
 
       <div className="space-y-4 lg:col-span-2 xl:space-y-8">
-        <AnimatedImage src={ImageFour} id="four" />
+        <ImageWrapper src={ImageFourteen} priority />
 
         <div className="grid grid-cols-1 space-y-4 lg:space-y-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
           <div className="space-y-4 lg:space-y-[25px] xl:space-y-[34px] 2xl:space-y-[42px]">
-            <AnimatedImage src={ImageFive} id="five" />
-            <AnimatedImage src={ImageSeven} id="seven" />
-            <AnimatedImage src={ImageEight} id="eight" />
-            <AnimatedImage src={ImageNine} id="nine" />
+            <ImageWrapper src={ImageFive} />
+            <ImageWrapper src={ImageSeven} />
+            <ImageWrapper src={ImageEight} />
+            <ImageWrapper src={ImageNine} />
+            <ImageWrapper src={ImageTen} />
+            <ImageWrapper src={ImageTwenty} />
+            <ImageWrapper src={ImageSeventeen} />
+            <ImageWrapper src={ImageNineteen} />
           </div>
 
           <div className="space-y-4 xl:space-y-8">
-            <AnimatedImage src={ImageThree} id="three" />
+            <ImageWrapper src={ImageThree} />
+            <ImageWrapper src={ImageEleven} />
+            <ImageWrapper src={ImageFour} />
+            <ImageWrapper src={ImageTwelve} />
+            <ImageWrapper src={ImageSixteen} />
+            <ImageWrapper src={ImageEighteen} />
           </div>
         </div>
-      </div>
-
-      <div className="lg:col-span-2">
-        <AnimatedImage src={ImageTen} id="ten" />
       </div>
     </div>
   );
