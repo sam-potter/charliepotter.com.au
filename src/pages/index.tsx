@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
 import ImageEleven from '../../public/images/2021_DSSP_139.jpg';
-import ImageTwelve from '../../public/images/2021_DSSP_Showcase_141.jpg';
-import ImageThirteen from '../../public/images/2021_DSSP_Showcase_142.jpg';
+// import ImageTwelve from '../../public/images/2021_DSSP_Showcase_141.jpg';
+// import ImageThirteen from '../../public/images/2021_DSSP_Showcase_142.jpg';
 import ImageFourteen from '../../public/images/2021_DSSP_Showcase_145.jpg';
-import ImageFifteen from '../../public/images/2021_DSSP_Showcase_190.jpg';
+// import ImageFifteen from '../../public/images/2021_DSSP_Showcase_190.jpg';
 import ImageSixteen from '../../public/images/2021_DSSP_Showcase_208.jpg';
 import ImageSeventeen from '../../public/images/2021_DSSP_Showcase_209.jpg';
 import ImageEighteen from '../../public/images/2021_DSSP_Showcase_271.jpg';
@@ -47,8 +47,8 @@ const Images = () => {
         <ImageWrapper src={ImageTwo} />
         <ImageWrapper src={ImageTwentyOne} />
         <ImageWrapper src={ImageTwentyTwo} />
-        <ImageWrapper src={ImageFifteen} />
-        <ImageWrapper src={ImageThirteen} />
+        {/* <ImageWrapper src={ImageFifteen} /> */}
+        {/* <ImageWrapper src={ImageThirteen} /> */}
       </div>
 
       <div className="space-y-4 lg:col-span-2 xl:space-y-8">
@@ -70,7 +70,7 @@ const Images = () => {
             <ImageWrapper src={ImageThree} />
             <ImageWrapper src={ImageEleven} />
             <ImageWrapper src={ImageFour} />
-            <ImageWrapper src={ImageTwelve} />
+            {/* <ImageWrapper src={ImageTwelve} /> */}
             <ImageWrapper src={ImageSixteen} />
             <ImageWrapper src={ImageEighteen} />
           </div>
