@@ -1,13 +1,13 @@
 import Image from 'next/image';
 
-import ImageTwelve from '@/../public/images/2021_DSSP Showcase_141.jpg';
-import ImageThirteen from '@/../public/images/2021_DSSP Showcase_142.jpg';
-import ImageFourteen from '@/../public/images/2021_DSSP Showcase_145.jpg';
-import ImageFifteen from '@/../public/images/2021_DSSP Showcase_190.jpg';
-import ImageSixteen from '@/../public/images/2021_DSSP Showcase_208.jpg';
-import ImageSeventeen from '@/../public/images/2021_DSSP Showcase_209.jpg';
-import ImageEighteen from '@/../public/images/2021_DSSP Showcase_271.jpg';
 import ImageEleven from '@/../public/images/2021_DSSP_139.jpg';
+import ImageTwelve from '@/../public/images/2021_DSSP_Showcase_141.jpg';
+import ImageThirteen from '@/../public/images/2021_DSSP_Showcase_142.jpg';
+import ImageFourteen from '@/../public/images/2021_DSSP_Showcase_145.jpg';
+import ImageFifteen from '@/../public/images/2021_DSSP_Showcase_190.jpg';
+import ImageSixteen from '@/../public/images/2021_DSSP_Showcase_208.jpg';
+import ImageSeventeen from '@/../public/images/2021_DSSP_Showcase_209.jpg';
+import ImageEighteen from '@/../public/images/2021_DSSP_Showcase_271.jpg';
 import ImageEight from '@/../public/images/eight.png';
 import ImageFive from '@/../public/images/five.png';
 import ImageFour from '@/../public/images/four.jpg';
