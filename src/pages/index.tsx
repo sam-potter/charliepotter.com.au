@@ -63,14 +63,14 @@ const Index = () => {
   return (
     <div>
       <p className="pt-12 text-lg font-semibold text-gray-900 lg:pt-24 xl:pt-32 lg:text-2xl xl:text-3xl">
-        <span className="text-blue-500">Charlie Potter</span> bio in a nutshell (
+        <span className="text-blue-500">Charlie Potter</span> in a nutshell (
         <span className="italic">semi allergic to nuts</span>):
       </p>
 
       <div className="pt-4 pl-8 space-y-4 text-gray-700 lg:pt-8 xl:pt-12 lg:space-y-6 xl:space-y-8 lg:pl-16 xl:pl-32 lg:text-xl xl:text-2xl max-w-prose">
         <p>
-          Drinks whiskey sours. Has zero clue what ATAR was acquired. Will repeatedly say schoolies was the best week to
-          date.
+          Drinks amaretto sours. Has zero clue what ATAR was acquired. Will repeatedly say schoolies was the best week
+          to date.
         </p>
 
         <p>Special skill: Aus Open ball boy. Will learn your on-court habits.</p>

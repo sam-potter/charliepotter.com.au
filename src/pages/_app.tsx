@@ -1,4 +1,4 @@
-import 'tailwindcss/tailwind.css';
+import '@/tailwind.css';
 
 import clsx from 'clsx';
 import { AppProps } from 'next/app';
@@ -19,15 +19,7 @@ const NavLink: React.FC<{ href: string }> = props => {
 
   return (
     <Link href={props.href}>
-      <a
-        className={clsx(
-          isActive
-            ? 'underline underline-offset-[7px] decoration-blue-500 decoration-2 text-gray-900'
-            : 'text-gray-700',
-        )}
-      >
-        {props.children}
-      </a>
+      <a className={clsx(isActive && 'text-blue-500 underline', 'link')}>{props.children}</a>
     </Link>
   );
 };
@@ -59,7 +51,7 @@ const App = ({ Component, pageProps }: AppProps) => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                className="hover:underline text-gray-600 hover:text-gray-900 underline-offset-[7px] decoration-2"
+                className="link"
                 href="http://linkedin.com/in/charlie-potter-135705163"
               >
                 LinkedIn
@@ -68,26 +60,21 @@ const App = ({ Component, pageProps }: AppProps) => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                className="hover:underline text-gray-600 hover:text-gray-900 underline-offset-[7px] decoration-2"
+                className="link"
                 href="https://www.youtube.com/channel/UCIgxUp5h-AtEB9MqeOq2avg"
               >
                 YouTube
               </a>
 
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://vimeo.com/charliepotter"
-                className="hover:underline text-gray-600 hover:text-gray-900 underline-offset-[7px] decoration-2"
-              >
+              <a target="_blank" rel="noreferrer" href="https://vimeo.com/charliepotter" className="link">
                 Vimeo
               </a>
 
               <a
                 target="_blank"
                 rel="noreferrer"
+                className="link"
                 href="https://app.showcast.com.au/profile/charliepotter"
-                className="hover:underline text-gray-600 hover:text-gray-900 underline-offset-[7px] decoration-2"
               >
                 Showcast
               </a>
@@ -96,10 +83,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             <div className="pt-12 text-right md:pt-0">
               <p className="pb-1 text-gray-900">Sydney, Australia</p>
 
-              <a
-                href="mailto:charlie@charliepotter.com.au"
-                className="hover:underline text-gray-600 hover:text-gray-900 underline-offset-[7px] decoration-2"
-              >
+              <a href="mailto:charlie@charliepotter.com.au" className="link">
                 charlie@charliepotter.com.au
               </a>
             </div>
